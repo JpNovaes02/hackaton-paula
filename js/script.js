@@ -185,5 +185,22 @@
   if (document.getElementById('busca')) { iniciarGlossario(); }
 })();
 
-// Abas de conteúdo e apresentação: apresentação fixa definida no HTML por missão
-(function(){ const tabs=document.querySelectorAll('[data-aba]'); const content=document.getElementById('painel-conteudo'); const slides=document.getElementById('painel-slides'); if(!tabs.length||!content||!slides)return; tabs.forEach(t=>t.addEventListener('click',()=>{tabs.forEach(b=>{b.classList.toggle('ativa',b===t);b.setAttribute('aria-selected',b===t?'true':'false')});const on=t.dataset.aba==='slides';content.hidden=on;slides.hidden=!on;}));})();
+// Abas de conteúdo, apresentação e materiais adicionais
+(function () {
+  const tabs = document.querySelectorAll('[data-aba]');
+  const paineis = document.querySelectorAll('.painel-aba');
+  if (!tabs.length || !paineis.length) return;
+
+  tabs.forEach(t => t.addEventListener('click', () => {
+    tabs.forEach(b => {
+      const ativa = b === t;
+      b.classList.toggle('ativa', ativa);
+      b.setAttribute('aria-selected', ativa ? 'true' : 'false');
+    });
+
+    const alvoId = 'painel-' + t.dataset.aba;
+    paineis.forEach(p => {
+      p.hidden = p.id !== alvoId;
+    });
+  }));
+})();

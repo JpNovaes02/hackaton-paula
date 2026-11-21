@@ -176,8 +176,10 @@ input[type=radio], input[type=checkbox] { width: 20px; height: 20px; flex: none;
 .abas-modulo { display:flex; gap:10px; flex-wrap:wrap; margin:26px 0 12px; border-bottom:2px solid var(--noite); }
 .aba-modulo { cursor:pointer; padding:12px 18px; border:2px solid var(--noite); border-bottom:0; border-radius:14px 14px 0 0; background:#fff; font:inherit; font-weight:700; color:var(--noite); }
 .aba-modulo.ativa { background:var(--violeta); color:#fff; }
-.painel-slides { background:#fff; border:2px solid var(--noite); border-radius:24px; padding:24px; margin:20px 0 32px; }
-.painel-slides[hidden] { display:none !important; }
+.painel-slides,
+.painel-material { background:#fff; border:2px solid var(--noite); border-radius:24px; padding:24px; margin:20px 0 32px; }
+.painel-slides[hidden],
+.painel-material[hidden] { display:none !important; }
 .campo-slides { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin:20px 0; }
 .campo-slides label { font-weight:700; flex-basis:100%; }
 .campo-slides input { flex:1 1 320px; min-width:0; padding:12px; border:2px solid var(--noite); border-radius:12px; font:inherit; }
