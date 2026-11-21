@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Início | Robótica na escola</title>
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<div class="wrap">
+<header class="cabecalho">
+<a class="logo" href="index.html">Robótica na escola</a>
+<nav aria-label="Principal">
+<a href="index.html#trilha" aria-current="page">Missões</a>
+<a href="modulo-6.html">Projetos</a>
+<a href="galeria.html">Galeria</a>
+<a href="glossario.html">Glossário</a>
+</nav>
+</header>
+<main id="conteudo">
+<div class="hero">
+<div class="hero-texto">
+<span class="selo">Robótica · ensino médio</span>
+<h1>Construa.<br>Programe.<br>Teste. Repita.</h1>
+<p>Seis missões para montar robôs, escrever código e resolver problemas de verdade, do seu jeito e no seu ritmo.</p>
+<div class="botoes">
+<a class="btn btn-violeta" href="modulo-1.html">Começar missão 1</a>
+<a class="btn btn-borda" href="galeria.html">Ver projetos da galeria</a>
+</div>
+</div>
+<div class="hero-arte">
+<svg class="robo" width="220" height="260" viewBox="0 0 240 280" aria-hidden="true">
+<line x1="120" y1="20" x2="120" y2="58" stroke="#FFC93C" stroke-width="8" stroke-linecap="round"/>
+<circle cx="120" cy="16" r="12" fill="#FF5C7A"/>
+<rect x="40" y="58" width="160" height="130" rx="36" fill="#fff"/>
+<circle cx="88" cy="112" r="16" fill="#1B1340"/><circle cx="152" cy="112" r="16" fill="#1B1340"/>
+<path d="M92 152 Q120 174 148 152" stroke="#FF5C7A" stroke-width="8" fill="none" stroke-linecap="round"/>
+<rect x="64" y="198" width="112" height="64" rx="20" fill="#1FD1A5"/>
+<rect x="14" y="208" width="30" height="16" rx="8" fill="#FFC93C"/><rect x="196" y="208" width="30" height="16" rx="8" fill="#FFC93C"/>
+</svg>
+<span class="chip chip-a" id="nivel">Nível 1 · Iniciante</span>
+<span class="chip chip-b" id="xp">0 XP</span>
+</div>
+</div>
+
+<section id="trilha">
+<h2>Sua trilha de missões</h2>
+<p class="sub">Cada missão tem teoria curta, uma prática de mão na massa e um quiz. O seu progresso fica salvo neste aparelho.</p>
+<div class="trilha">
+<a class="card cor-violeta" href="modulo-1.html" data-modulo="1"><span class="num">01</span><h3>Introdução à robótica</h3><p>O que é um robô e como ele recebe instruções.</p><div class="mini" aria-hidden="true"><div></div></div><span class="tag">Teoria + prática</span></a>
+<a class="card cor-amarelo" href="modulo-2.html" data-modulo="2"><span class="num">02</span><h3>Pensamento computacional</h3><p>Algoritmos, laços e condicionais com blocos.</p><div class="mini" aria-hidden="true"><div></div></div><span class="tag">Teoria + prática</span></a>
+<a class="card cor-menta" href="modulo-3.html" data-modulo="3"><span class="num">03</span><h3>Construir e compreender mecanismos</h3><p>Rodas, engrenagens e um carrinho de Lego.</p><div class="mini" aria-hidden="true"><div></div></div><span class="tag">Teoria + prática</span></a>
+<a class="card cor-coral" href="modulo-4.html" data-modulo="4"><span class="num">04</span><h3>Eletrônica básica</h3><p>Circuitos, LEDs e Arduino no protoboard.</p><div class="mini" aria-hidden="true"><div></div></div><span class="tag">Teoria + prática</span></a>
+<a class="card cor-ceu" href="modulo-5.html" data-modulo="5"><span class="num">05</span><h3>Sensores e atuadores</h3><p>Um robô que detecta obstáculos e decide.</p><div class="mini" aria-hidden="true"><div></div></div><span class="tag">Teoria + prática</span></a>
+<a class="card cor-noite" href="modulo-6.html" data-modulo="6"><span class="num">06</span><h3>Projetos e desafios de robótica</h3><p>Escolha uma missão final e mostre o que criou.</p><div class="mini" aria-hidden="true"><div></div></div><span class="tag">Desafio final</span></a>
+</div>
+</section>
+
+<section>
+<h2>Conquistas para desbloquear</h2>
+<p class="sub">Complete uma missão inteira para ganhar a conquista dela.</p>
+<div class="conquistas">
+<div class="badge" data-modulo="1" style="--c:#FFC93C"><i></i>Exploradora<small>Bloqueada</small></div>
+<div class="badge" data-modulo="2" style="--c:#5B3DF5"><i></i>Primeiro código<small>Bloqueada</small></div>
+<div class="badge" data-modulo="3" style="--c:#1FD1A5"><i></i>Engenheira de rodas<small>Bloqueada</small></div>
+<div class="badge" data-modulo="4" style="--c:#FF5C7A"><i></i>Primeiro LED aceso<small>Bloqueada</small></div>
+<div class="badge" data-modulo="5" style="--c:#5CC8FF"><i></i>Caçadora de bugs<small>Bloqueada</small></div>
+<div class="badge" data-modulo="6" style="--c:#1B1340"><i></i>Mestra dos projetos<small>Bloqueada</small></div>
+</div>
+</section>
+
+<div class="cta">
+<div>
+<h2>Mostre o seu robô para a escola toda</h2>
+<p>Envie uma foto ou vídeo e entre na galeria da turma.</p>
+</div>
+<a class="btn btn-noite" href="galeria.html">Ir para a galeria</a>
+</div>
+<p class="reset"><button type="button" id="reiniciar" class="btn-link">Apagar o meu progresso neste aparelho</button></p>
+</main>
+<footer class="rodape-site">Robótica na escola · feito para aprender construindo</footer>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projetos e desafios de robótica | Robótica na escola</title>
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="pagina-modulo" data-modulo="6">
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<div class="wrap">
+<header class="cabecalho">
+<a class="logo" href="index.html">Robótica na escola</a>
+<nav aria-label="Principal">
+<a href="index.html#trilha">Missões</a>
+<a href="modulo-6.html" aria-current="page">Projetos</a>
+<a href="galeria.html">Galeria</a>
+<a href="glossario.html">Glossário</a>
+</nav>
+</header>
+<main id="conteudo">
+<div class="topo-modulo cor-noite">
+<span class="missao">Missão 6 de 6</span>
+<h1>Projetos e desafios de robótica</h1>
+<p>Objetivo: Aplicar os conhecimentos adquiridos na resolução de problemas.</p>
+<div class="barra-linha">
+<div class="barra" role="progressbar" aria-label="Progresso da missão" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="barra-modulo"><div id="prog-modulo" style="width:0%"></div></div>
+<span id="prog-texto">0%</span>
+</div>
+</div>
+<div class="abas-modulo" role="tablist" aria-label="Conteúdo da missão">
+<button type="button" class="aba-modulo ativa" role="tab" aria-selected="true" data-aba="conteudo">Conteúdo</button>
+<button type="button" class="aba-modulo" role="tab" aria-selected="false" data-aba="slides">Apresentação de slides</button>
+</div>
+<div id="painel-conteudo" class="painel-aba" role="tabpanel">
+<div class="layout">
+<div class="principal">
+<h2>1. Sugestões de projetos</h2>
+<details data-tema="0">
+<summary>Robô que percorre um labirinto<span class="estado">A fazer</span></summary>
+<div class="conteudo">
+<p>[Escreva aqui a explicação de “Robô que percorre um labirinto”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
+<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<button type="button" class="concluir">Marcar como explorado</button>
+</div>
+</details>
+<details data-tema="1">
+<summary>Carro que desvia de obstáculos<span class="estado">A fazer</span></summary>
+<div class="conteudo">
+<p>[Escreva aqui a explicação de “Carro que desvia de obstáculos”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
+<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<button type="button" class="concluir">Marcar como explorado</button>
+</div>
+</details>
+<details data-tema="2">
+<summary>Sistema automatizado de iluminação<span class="estado">A fazer</span></summary>
+<div class="conteudo">
+<p>[Escreva aqui a explicação de “Sistema automatizado de iluminação”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
+<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<button type="button" class="concluir">Marcar como explorado</button>
+</div>
+</details>
+<details data-tema="3">
+<summary>Robô que segue uma linha<span class="estado">A fazer</span></summary>
+<div class="conteudo">
+<p>[Escreva aqui a explicação de “Robô que segue uma linha”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
+<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<button type="button" class="concluir">Marcar como explorado</button>
+</div>
+</details>
+<details data-tema="4">
+<summary>Cidade inteligente em miniatura<span class="estado">A fazer</span></summary>
+<div class="conteudo">
+<p>[Escreva aqui a explicação de “Cidade inteligente em miniatura”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
+<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<button type="button" class="concluir">Marcar como explorado</button>
+</div>
+</details>
+<details data-tema="5">
+<summary>Robô para uma competição de missões<span class="estado">A fazer</span></summary>
+<div class="conteudo">
+<p>[Escreva aqui a explicação de “Robô para uma competição de missões”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
+<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<button type="button" class="concluir">Marcar como explorado</button>
+</div>
+</details>
+
+<h2 class="espaco">3. Quiz rápido</h2>
+<div class="quiz">
+<p class="pergunta" id="pergunta">Qual é um bom primeiro passo para resolver um problema de robótica?</p>
+<div role="radiogroup" aria-labelledby="pergunta">
+<label class="opcao"><input type="radio" name="q" data-certo="sim">Entender e definir bem o problema</label>
+<label class="opcao"><input type="radio" name="q">Montar tudo sem planejar</label>
+<label class="opcao"><input type="radio" name="q">Esperar o robô funcionar sozinho</label>
+</div>
+<button type="button" id="conferir">Conferir resposta</button>
+<p id="resposta" role="status" aria-live="polite"></p>
+</div>
+</div>
+<aside class="lateral">
+<div class="pratica">
+<span class="rotulo">2. Missão prática</span>
+<h3>Sua missão final</h3>
+<p>Escolha um projeto, planeje com o seu grupo, construa, teste e apresente para a turma.</p>
+<span class="sub">Materiais</span>
+<ul class="lista"><li>Os materiais dos módulos anteriores</li><li>Caderno do projeto</li></ul>
+<span class="sub">Marque o que você já fez</span>
+<label class="opcao"><input type="checkbox" class="passo" data-i="0">Escolhi o projeto e defini o problema</label>
+<label class="opcao"><input type="checkbox" class="passo" data-i="1">Planejei e dividi as tarefas do grupo</label>
+<label class="opcao"><input type="checkbox" class="passo" data-i="2">Construí e testei o robô</label>
+<label class="opcao"><input type="checkbox" class="passo" data-i="3">Apresentei para a turma</label>
+<div class="barra barra-pratica" aria-hidden="true"><div id="prog-pratica" style="width:0%"></div></div>
+<span class="sub" id="contagem" aria-live="polite">0 de 4 passos</span>
+<div class="extra">Desafio extra: Envie fotos ou um vídeo do seu projeto para a galeria.</div>
+</div>
+<div class="bug">
+<b>Bug no código?</b>
+<p>Errar faz parte. Teste, observe o que aconteceu e corrija um passo de cada vez.</p>
+</div>
+</aside>
+</div>
+</div>
+<section id="painel-slides" class="painel-aba painel-slides" role="tabpanel" hidden>
+<h2>Apresentação da missão</h2>
+<div class="visualizador-slides"><iframe title="Apresentação da missão 6" src="https://view.officeapps.live.com/op/embed.aspx?src=COLOQUE_A_URL_PUBLICA_DO_PPT_AQUI" allowfullscreen></iframe></div>
+</section>
+<div class="rodape-modulo">
+<a class="btn btn-borda" href="modulo-5.html">Missão 5</a>
+<a class="btn btn-noite" href="galeria.html">Enviar para a galeria</a>
+</div>
+</main>
+<footer class="rodape-site">Robótica na escola · feito para aprender construindo</footer>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>

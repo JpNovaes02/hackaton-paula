@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introdução à robótica | Robótica na escola</title>
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="pagina-modulo" data-modulo="1">
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<div class="wrap">
+<header class="cabecalho">
+<a class="logo" href="index.html">Robótica na escola</a>
+<nav aria-label="Principal">
+<a href="index.html#trilha" aria-current="page">Missões</a>
+<a href="modulo-6.html">Projetos</a>
+<a href="galeria.html">Galeria</a>
+<a href="glossario.html">Glossário</a>
+</nav>
+</header>
+<main id="conteudo">
+<div class="topo-modulo cor-violeta">
+<span class="missao">Missão 1 de 6</span>
+<h1>Introdução à robótica</h1>
+<p>Objetivo: Despertar a curiosidade e apresentar conceitos fundamentais.</p>
+<div class="barra-linha">
+<div class="barra" role="progressbar" aria-label="Progresso da missão" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="barra-modulo"><div id="prog-modulo" style="width:0%"></div></div>
+<span id="prog-texto">0%</span>
+</div>
+</div>
+<div class="abas-modulo" role="tablist" aria-label="Conteúdo da missão">
+<button type="button" class="aba-modulo ativa" role="tab" aria-selected="true" data-aba="conteudo">Conteúdo</button>
+<button type="button" class="aba-modulo" role="tab" aria-selected="false" data-aba="slides">Apresentação de slides</button>
+<button type="button" class="aba-modulo" role="tab" aria-selected="false" data-aba="material">Material adicional</button>
+</div>
+<div id="painel-conteudo" class="painel-aba" role="tabpanel">
+<div class="layout">
+<div class="principal">
+<h2>1. Teoria</h2>
+<details data-tema="0">
+<summary>O que é robótica?<span class="estado">A fazer</span></summary>
+<div class="conteudo">
+<p>[Escreva aqui a explicação de “O que é robótica?”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
+<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<button type="button" class="concluir">Marcar como concluído</button>
+</div>
+</details>
+<details data-tema="1">
+<summary>Robôs no cotidiano<span class="estado">A fazer</span></summary>
+<div class="conteudo">
+<p>[Escreva aqui a explicação de “Robôs no cotidiano”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
+<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<button type="button" class="concluir">Marcar como concluído</button>
+</div>
+</details>
+<details data-tema="2">
+<summary>Diferenças entre máquinas, robôs e seres vivos<span class="estado">A fazer</span></summary>
+<div class="conteudo">
+<p>[Escreva aqui a explicação de “Diferenças entre máquinas, robôs e seres vivos”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
+<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<button type="button" class="concluir">Marcar como concluído</button>
+</div>
+</details>
+<details data-tema="3">
+<summary>Como um robô recebe instruções?<span class="estado">A fazer</span></summary>
+<div class="conteudo">
+<p>[Escreva aqui a explicação de “Como um robô recebe instruções?”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
+<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<button type="button" class="concluir">Marcar como concluído</button>
+</div>
+</details>
+<details data-tema="4">
+<summary>Introdução à resolução de problemas<span class="estado">A fazer</span></summary>
+<div class="conteudo">
+<p>[Escreva aqui a explicação de “Introdução à resolução de problemas”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
+<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<button type="button" class="concluir">Marcar como concluído</button>
+</div>
+</details>
+
+<h2 class="espaco">3. Quiz rápido</h2>
+<div class="quiz">
+<p class="pergunta" id="pergunta">Como um robô recebe instruções?</p>
+<div role="radiogroup" aria-labelledby="pergunta">
+<label class="opcao"><input type="radio" name="q" data-certo="sim">Por meio de um programa, um conjunto de comandos</label>
+<label class="opcao"><input type="radio" name="q">Ele adivinha o que fazer</label>
+<label class="opcao"><input type="radio" name="q">Só funciona se alguém o empurrar</label>
+</div>
+<button type="button" id="conferir">Conferir resposta</button>
+<p id="resposta" role="status" aria-live="polite"></p>
+</div>
+</div>
+<aside class="lateral">
+<div class="pratica">
+<span class="rotulo">2. Missão prática</span>
+<h3>Um robô para o seu dia a dia</h3>
+<p>Identifique robôs no cotidiano e imagine um robô para resolver um problema que você enxerga ao seu redor.</p>
+<span class="sub">Materiais</span>
+<ul class="lista"><li>Papel e caneta</li><li>Fotos ou observações do seu bairro e da escola</li></ul>
+<span class="sub">Marque o que você já fez</span>
+<label class="opcao"><input type="checkbox" class="passo" data-i="0">Listei robôs que vejo no dia a dia</label>
+<label class="opcao"><input type="checkbox" class="passo" data-i="1">Descrevi o problema que o meu robô resolveria</label>
+<label class="opcao"><input type="checkbox" class="passo" data-i="2">Desenhei o meu robô</label>
+<div class="barra barra-pratica" aria-hidden="true"><div id="prog-pratica" style="width:0%"></div></div>
+<span class="sub" id="contagem" aria-live="polite">0 de 3 passos</span>
+<div class="extra">Desafio extra: Apresente a ideia do seu robô em um minuto para a turma.</div>
+</div>
+<div class="bug">
+<b>Bug no código?</b>
+<p>Errar faz parte. Teste, observe o que aconteceu e corrija um passo de cada vez.</p>
+</div>
+</aside>
+</div>
+</div>
+
+<section id="painel-slides" class="painel-aba painel-slides" role="tabpanel" hidden>
+<h2>Apresentação da missão</h2>
+<div class="visualizador-slides"><iframe src="https://unicampbr-my.sharepoint.com/personal/j174494_m_unicamp_br/_layouts/15/Doc.aspx?sourcedoc={d236d091-c313-4410-a9b6-0349133eddb3}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="476px" height="288px" frameborder="0" title="Visualizador do PowerPoint">Este é um apresentação do <a target="_blank" href="https://office.com">Microsoft Office</a> incorporado, da plataforma <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe></div>
+</section>
+
+<section id="painel-material" class="painel-aba painel-material" role="tabpanel" hidden>
+<h2>Teste</h2>
+<div class="visualizador-slides"><iframe src="https://unicampbr-my.sharepoint.com/personal/j174494_m_unicamp_br/_layouts/15/Doc.aspx?sourcedoc={d236d091-c313-4410-a9b6-0349133eddb3}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="476px" height="288px" frameborder="0" title="Visualizador do PowerPoint">Este é um apresentação do <a target="_blank" href="https://office.com">Microsoft Office</a> incorporado, da plataforma <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe></div>
+</section>
+
+<div class="rodape-modulo">
+<a class="btn btn-borda" href="index.html#trilha">Voltar para a trilha</a>
+<a class="btn btn-noite" href="modulo-2.html">Próxima missão: Pensamento computacional</a>
+</div>
+</main>
+<footer class="rodape-site">Robótica na escola · feito para aprender construindo</footer>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
