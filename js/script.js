@@ -4,7 +4,7 @@
   'use strict';
 
   // Quantidade de temas e passos de cada módulo (gerado automaticamente).
-  var MODULOS = {"1": {"temas": 5, "passos": 3}, "2": {"temas": 5, "passos": 3}, "3": {"temas": 6, "passos": 3}, "4": {"temas": 6, "passos": 3}, "5": {"temas": 6, "passos": 3}, "6": {"temas": 6, "passos": 4}};
+  var MODULOS = {"1": {"temas": 6, "passos": 3}, "2": {"temas": 6, "passos": 3}, "3": {"temas": 6, "passos": 3}, "4": {"temas": 6, "passos": 3}, "5": {"temas": 6, "passos": 3}, "6": {"temas": 6, "passos": 4}};
   var CHAVE = 'robotica-escola-v1';
   var NIVEIS = [
     { min: 0, nome: 'Iniciante' },

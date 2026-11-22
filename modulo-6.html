@@ -38,63 +38,69 @@
 <div id="painel-conteudo" class="painel-aba" role="tabpanel">
 <div class="layout">
 <div class="principal">
-<h2>1. Sugestões de projetos</h2>
+<h2>1. Projeto seguidor de linha</h2>
 <details data-tema="0">
-<summary>Robô que percorre um labirinto<span class="estado">A fazer</span></summary>
+<summary>Definir o problema e a missão<span class="estado">A fazer</span></summary>
 <div class="conteudo">
-<p>[Escreva aqui a explicação de “Robô que percorre um labirinto”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
-<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<p>O projeto final começa com uma pergunta concreta: como o robô pode seguir uma linha escura em uma pista clara, manter o alinhamento e concluir o percurso?</p>
+<p>Antes da montagem, precisamos definir critérios verificáveis. Eles podem incluir distância percorrida, tempo, velocidade, capacidade de contornar curvas e estabilidade do carro.</p>
+<div class="dica"><b>Planejamento:</b> registre o objetivo, os recursos disponíveis e os sinais que o robô conseguirá observar.</div>
 <button type="button" class="concluir">Marcar como explorado</button>
 </div>
 </details>
 <details data-tema="1">
-<summary>Carro que desvia de obstáculos<span class="estado">A fazer</span></summary>
+<summary>Estrutura e montagem mecânica<span class="estado">A fazer</span></summary>
 <div class="conteudo">
-<p>[Escreva aqui a explicação de “Carro que desvia de obstáculos”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
-<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<p>A estrutura precisa sustentar motores, rodas, bateria e sensores sem deslizar ou desequilibrar o conjunto. Eixos e rodas devem estar alinhados para reduzir desvios durante o percurso.</p>
+<p>O peso precisa ficar distribuído de forma que o sensor possa observar a linha na posição adequada. Uma montagem instável pode produzir leituras inconsistentes mesmo quando o programa está correto.</p>
+<div class="dica"><b>Antes do teste:</b> confira pneus, encaixes, altura do sensor e conexão entre motores e rodas.</div>
 <button type="button" class="concluir">Marcar como explorado</button>
 </div>
 </details>
 <details data-tema="2">
-<summary>Sistema automatizado de iluminação<span class="estado">A fazer</span></summary>
+<summary>Sensores que distinguem a linha<span class="estado">A fazer</span></summary>
 <div class="conteudo">
-<p>[Escreva aqui a explicação de “Sistema automatizado de iluminação”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
-<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<p>O robô seguidor de linha usa sensores que detectam diferenças entre o piso claro e a linha escura. Em geral, refletores ou sensores ópticos transformam essa leitura em valores que podem ser comparados pelo programa.</p>
+<p>A posição dos sensores influencia o tempo de resposta. Sensores muito largos ou muito baixos podem se afastar da linha em curvas. A calibração deve considerar a pista real que será utilizada.</p>
+<div class="dica"><b>Calibre com a pista:</b> registre leituras sobre a linha, sobre o fundo claro e em pontos intermediários.</div>
 <button type="button" class="concluir">Marcar como explorado</button>
 </div>
 </details>
 <details data-tema="3">
-<summary>Robô que segue uma linha<span class="estado">A fazer</span></summary>
+<summary>Lógica para seguir o trajeto<span class="estado">A fazer</span></summary>
 <div class="conteudo">
-<p>[Escreva aqui a explicação de “Robô que segue uma linha”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
-<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<p>A direção do robô pode ser controlada pelos sensores. Quando ambos percebem o fundo claro, o carro avança; quando um sensor identifica a linha, o motor correspondente corrige a direção.</p>
+<p>Curvas exigem ajustes diferentes dos trechos retos. Pode ser necessário girar apenas uma roda, aumentar ou reduzir a potência e, em curvas fechadas, inverter temporariamente o sentido de um lado.</p>
+<div class="dica"><b>Lógica simples:</b> ler → comparar → ajustar rodas → ler novamente.</div>
 <button type="button" class="concluir">Marcar como explorado</button>
 </div>
 </details>
 <details data-tema="4">
-<summary>Cidade inteligente em miniatura<span class="estado">A fazer</span></summary>
+<summary>Integração entre programação e motores<span class="estado">A fazer</span></summary>
 <div class="conteudo">
-<p>[Escreva aqui a explicação de “Cidade inteligente em miniatura”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
-<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<p>A programação recebe as leituras dos sensores e envia sinais aos motores. O projeto depende da integração correta entre estrutura, circuitos, controlador e código.</p>
+<p>O mesmo código pode se comportar de maneiras diferentes em terrenos ou pistas distintos. Velocidade, bateria, altura dos sensores e potência dos motores são fatores que devem ser considerados.</p>
+<div class="dica"><b>Organize o projeto:</b> separe funções de leitura, decisão e controle das rodas para facilitar testes e ajustes.</div>
 <button type="button" class="concluir">Marcar como explorado</button>
 </div>
 </details>
 <details data-tema="5">
-<summary>Robô para uma competição de missões<span class="estado">A fazer</span></summary>
+<summary>Testes, depuração e apresentação<span class="estado">A fazer</span></summary>
 <div class="conteudo">
-<p>[Escreva aqui a explicação de “Robô para uma competição de missões”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
-<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<p>Os testes devem começar em uma linha reta e evoluir para curvas. Em cada rodada, compare o comportamento esperado com o resultado observado e altere uma variável por vez.</p>
+<p>A apresentação pode explicar o problema escolhido, o desenho do robô, a função dos sensores e motores, os resultados dos testes e as melhorias realizadas.</p>
+<div class="dica"><b>Projeto completo:</b> documente ligações, decisões de programação, erros encontrados e mudanças feitas durante o desenvolvimento.</div>
 <button type="button" class="concluir">Marcar como explorado</button>
 </div>
 </details>
 
 <h2 class="espaco">3. Quiz rápido</h2>
 <div class="quiz">
-<p class="pergunta" id="pergunta">Qual é um bom primeiro passo para resolver um problema de robótica?</p>
+<p class="pergunta" id="pergunta">Em um projeto seguidor de linha, qual sequência representa melhor o processo de desenvolvimento?</p>
 <div role="radiogroup" aria-labelledby="pergunta">
-<label class="opcao"><input type="radio" name="q" data-certo="sim">Entender e definir bem o problema</label>
-<label class="opcao"><input type="radio" name="q">Montar tudo sem planejar</label>
-<label class="opcao"><input type="radio" name="q">Esperar o robô funcionar sozinho</label>
+<label class="opcao"><input type="radio" name="q" data-certo="sim">Definir a missão, montar e integrar, testar e depurar</label>
+<label class="opcao"><input type="radio" name="q">Apresentar antes de planejar e testar</label>
+<label class="opcao"><input type="radio" name="q">Alterar todos os componentes após cada tentativa</label>
 </div>
 <button type="button" id="conferir">Conferir resposta</button>
 <p id="resposta" role="status" aria-live="polite"></p>
@@ -103,18 +109,18 @@
 <aside class="lateral">
 <div class="pratica">
 <span class="rotulo">2. Missão prática</span>
-<h3>Sua missão final</h3>
-<p>Escolha um projeto, planeje com o seu grupo, construa, teste e apresente para a turma.</p>
+<h3>Construa o projeto seguidor de linha</h3>
+<p>Planeje o robô, integre estrutura, sensores, programação e motores, depois teste em uma pista e apresente as decisões e melhorias da equipe.</p>
 <span class="sub">Materiais</span>
-<ul class="lista"><li>Os materiais dos módulos anteriores</li><li>Caderno do projeto</li></ul>
+<ul class="lista"><li>Chassi, motores, rodas e bateria</li><li>Sensores ópticos e controlador</li><li>Pista com linha, mapa de ligações e caderno do projeto</li></ul>
 <span class="sub">Marque o que você já fez</span>
-<label class="opcao"><input type="checkbox" class="passo" data-i="0">Escolhi o projeto e defini o problema</label>
-<label class="opcao"><input type="checkbox" class="passo" data-i="1">Planejei e dividi as tarefas do grupo</label>
-<label class="opcao"><input type="checkbox" class="passo" data-i="2">Construí e testei o robô</label>
-<label class="opcao"><input type="checkbox" class="passo" data-i="3">Apresentei para a turma</label>
+<label class="opcao"><input type="checkbox" class="passo" data-i="0">Defini a missão e planejei as tarefas da equipe</label>
+<label class="opcao"><input type="checkbox" class="passo" data-i="1">Montei o robô e conectei os sensores e motores</label>
+<label class="opcao"><input type="checkbox" class="passo" data-i="2">Calibrei os sensores e implementei o controle da linha</label>
+<label class="opcao"><input type="checkbox" class="passo" data-i="3">Testei em retas e curvas e apresentei os resultados</label>
 <div class="barra barra-pratica" aria-hidden="true"><div id="prog-pratica" style="width:0%"></div></div>
 <span class="sub" id="contagem" aria-live="polite">0 de 4 passos</span>
-<div class="extra">Desafio extra: Envie fotos ou um vídeo do seu projeto para a galeria.</div>
+<div class="extra">Desafio extra: Compare a velocidade em uma reta e o ajuste necessário para completar uma curva.</div>
 </div>
 <div class="bug">
 <b>Bug no código?</b>

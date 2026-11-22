@@ -40,61 +40,67 @@
 <div class="principal">
 <h2>1. Teoria</h2>
 <details data-tema="0">
-<summary>Movimento e controle<span class="estado">A fazer</span></summary>
+<summary>Sensores, entradas e percepção<span class="estado">A fazer</span></summary>
 <div class="conteudo">
-<p>[Escreva aqui a explicação de “Movimento e controle”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
-<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<p>Um sensor transforma uma informação do ambiente em um sinal que pode ser lido pelo sistema de controle. Luz, distância, toque, temperatura e intensidade sonora podem ser observados por tipos diferentes de sensores.</p>
+<p>Nosso robô usa essa entrada para decidir o comportamento. Antes da ação, o programa precisa interpretar o valor recebido e compará-lo com um limite definido para a tarefa.</p>
+<div class="dica"><b>Ponto de atenção:</b> um sensor não toma decisões por si só. Ele fornece dados que precisam ser processados por uma regra ou programa.</div>
 <button type="button" class="concluir">Marcar como concluído</button>
 </div>
 </details>
 <details data-tema="1">
-<summary>Detecção de obstáculos<span class="estado">A fazer</span></summary>
+<summary>Sensores de distância<span class="estado">A fazer</span></summary>
 <div class="conteudo">
-<p>[Escreva aqui a explicação de “Detecção de obstáculos”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
-<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<p>O sensor de distância mede o espaço entre o robô e um objeto próximo. Dependendo do modelo, pode usar ondas sonoras ou luz para estimar essa distância.</p>
+<p>O valor obtido não é perfeito: superfícies, ângulos e ruídos podem influenciar a leitura. Por isso, o robô deve ser testado em várias posições e distâncias.</p>
+<div class="dica"><b>Calibração:</b> compare leituras em distâncias conhecidas antes de escolher o limite que fará o robô desviar.</div>
 <button type="button" class="concluir">Marcar como concluído</button>
 </div>
 </details>
 <details data-tema="2">
-<summary>Sensores de distância<span class="estado">A fazer</span></summary>
+<summary>Detecção de obstáculos<span class="estado">A fazer</span></summary>
 <div class="conteudo">
-<p>[Escreva aqui a explicação de “Sensores de distância”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
-<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<p>Detectar um obstáculo significa reconhecer uma leitura que indica que um objeto está próximo demais. Essa definição depende do espaço, da velocidade e da capacidade de reação do robô.</p>
+<p>Quando o limite é muito curto, o robô pode não reagir a tempo. Quando é muito longo, pode parar ou desviar mesmo quando o espaço ainda está livre.</p>
+<div class="dica"><b>Experimente:</b> coloque obstáculos em pontos diferentes do circuito e ajuste o limite a partir dos resultados observados.</div>
 <button type="button" class="concluir">Marcar como concluído</button>
 </div>
 </details>
 <details data-tema="3">
 <summary>Tomada de decisão<span class="estado">A fazer</span></summary>
 <div class="conteudo">
-<p>[Escreva aqui a explicação de “Tomada de decisão”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
-<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<p>Depois de receber a distância, o programa pode tomar uma decisão condicional: seguir em frente quando o caminho está livre ou parar e mudar de direção quando o sensor detecta o obstáculo.</p>
+<p>O motor executa a ação indicada pelo controle. Os resultados precisam ser observados na prática, pois uma decisão correta exige que o robô tenha tempo suficiente para responder.</p>
+<div class="dica"><b>Raciocínio do sistema:</b> sensor mede → programa compara → decisão é escolhida → motores executam a ação.</div>
 <button type="button" class="concluir">Marcar como concluído</button>
 </div>
 </details>
 <details data-tema="4">
-<summary>Interação com o ambiente<span class="estado">A fazer</span></summary>
+<summary>Atuadores e controle do movimento<span class="estado">A fazer</span></summary>
 <div class="conteudo">
-<p>[Escreva aqui a explicação de “Interação com o ambiente”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
-<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<p>Atuadores são componentes que produzem uma ação. Motores podem girar rodas para avançar, recuar ou fazer curvas. O tipo de movimento depende da velocidade e da direção de cada motor.</p>
+<p>Para contornar um obstáculo, o robô pode desacelerar, girar em um sentido, seguir em frente por um trecho e depois retornar ao caminho. Cada ação precisa ser testada separadamente.</p>
+<div class="dica"><b>Alinhamento:</b> rodas desalinhadas ou motores com potenciais diferentes podem fazer o robô virar mesmo sem receber uma instrução.</div>
 <button type="button" class="concluir">Marcar como concluído</button>
 </div>
 </details>
 <details data-tema="5">
-<summary>Testes e correção de erros<span class="estado">A fazer</span></summary>
+<summary>Testes no circuito e depuração<span class="estado">A fazer</span></summary>
 <div class="conteudo">
-<p>[Escreva aqui a explicação de “Testes e correção de erros”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
-<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<p>A missão deve começar em um circuito simples. Primeiro testamos o movimento reto, depois a leitura do sensor e, por fim, a reação ao obstáculo.</p>
+<p>Se o robô não responde, podemos verificar montagem, posição do sensor, bateria, programação e limite escolhido. Erros podem estar na comunicação entre mecânica, eletrônica e código.</p>
+<div class="dica"><b>Depuração integrada:</b> altere uma condição por vez e registre a distância, o obstáculo usado e o comportamento observado.</div>
 <button type="button" class="concluir">Marcar como concluído</button>
 </div>
 </details>
 
 <h2 class="espaco">3. Quiz rápido</h2>
 <div class="quiz">
-<p class="pergunta" id="pergunta">O que faz um sensor de distância?</p>
+<p class="pergunta" id="pergunta">Como o robô deve reagir quando um sensor identifica um obstáculo próximo?</p>
 <div role="radiogroup" aria-labelledby="pergunta">
-<label class="opcao"><input type="radio" name="q" data-certo="sim">Mede a distância até um objeto</label>
-<label class="opcao"><input type="radio" name="q">Aumenta a velocidade do motor</label>
-<label class="opcao"><input type="radio" name="q">Guarda o programa do robô</label>
+<label class="opcao"><input type="radio" name="q" data-certo="sim">O programa compara a leitura e decide parar, virar ou desviar</label>
+<label class="opcao"><input type="radio" name="q">Apenas o formato das rodas calcula a distância</label>
+<label class="opcao"><input type="radio" name="q">O sensor guarda o percurso completo antes da leitura</label>
 </div>
 <button type="button" id="conferir">Conferir resposta</button>
 <p id="resposta" role="status" aria-live="polite"></p>
@@ -103,14 +109,14 @@
 <aside class="lateral">
 <div class="pratica">
 <span class="rotulo">2. Missão prática</span>
-<h3>Robô que percorre o circuito</h3>
-<p>Construa um robô de Lego capaz de percorrer um circuito e detectar obstáculos.</p>
+<h3>Desvie de obstáculos no circuito</h3>
+<p>Monte o carrinho com sensor de distância, defina um limite seguro e programe uma sequência que detecte obstáculos e execute uma reação adequada no circuito.</p>
 <span class="sub">Materiais</span>
-<ul class="lista"><li>Kit de Lego com motores e sensor de distância</li><li>Computador para programar</li><li>Fita ou papelão para o circuito e obstáculos</li></ul>
+<ul class="lista"><li>Robô de Lego com motores e sensor de distância</li><li>Computador para programar</li><li>Circuito, fita métrica e obstáculos</li><li>Mapa visual de ligações da aula</li></ul>
 <span class="sub">Marque o que você já fez</span>
-<label class="opcao"><input type="checkbox" class="passo" data-i="0">Montei o robô com o sensor</label>
-<label class="opcao"><input type="checkbox" class="passo" data-i="1">Programei o robô para detectar obstáculos</label>
-<label class="opcao"><input type="checkbox" class="passo" data-i="2">Testei no circuito e corrigi os erros</label>
+<label class="opcao"><input type="checkbox" class="passo" data-i="0">Fixei o sensor e calibrei as leituras de distância</label>
+<label class="opcao"><input type="checkbox" class="passo" data-i="1">Programei o limite e a reação ao obstáculo</label>
+<label class="opcao"><input type="checkbox" class="passo" data-i="2">Testei no circuito e ajustei movimento ou condição</label>
 <div class="barra barra-pratica" aria-hidden="true"><div id="prog-pratica" style="width:0%"></div></div>
 <span class="sub" id="contagem" aria-live="polite">0 de 3 passos</span>
 <div class="extra">Desafio extra: Inclua um novo obstáculo e faça o robô contorná-lo sem ajuda.</div>
