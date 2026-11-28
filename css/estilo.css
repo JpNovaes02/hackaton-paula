@@ -159,6 +159,20 @@ input[type=radio], input[type=checkbox] { width: 20px; height: 20px; flex: none;
 .termo dt { font-weight: 700; font-size: 18px; font-family: 'Space Grotesk', Arial, sans-serif; margin-bottom: 4px; }
 .termo dd { margin: 0; font-size: 15px; line-height: 1.5; }
 
+.topo-reforco { margin-bottom: 24px; }
+.grade-reforco { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:16px; padding:8px 0 40px; }
+.desafio-reforco { display:flex; flex-direction:column; align-items:flex-start; justify-content:space-between; gap:18px; min-height:150px; background:#fff; border:2px solid var(--noite); border-radius:20px; padding:22px; }
+.desafio-reforco h2 { margin:0; font-size:22px; }
+.desafio-reforco .btn { padding:11px 20px; }
+.atividade-arduino { display:block; grid-column:1 / -1; width:100%; min-height:0; padding:4px 24px; }
+.atividade-arduino summary { min-height:60px; }
+.atividade-arduino .conteudo { padding-bottom:20px; }
+.atividade-arduino h3 { margin:10px 0 0; font-size:19px; }
+.atividade-arduino p, .atividade-arduino li { max-width:860px; line-height:1.55; }
+.atividade-arduino ul, .atividade-arduino ol { margin:0; padding-left:24px; }
+.codigo-atividade { width:100%; max-width:900px; overflow-x:auto; margin:0; padding:18px; border-radius:12px; background:var(--noite); color:#fff; font:14px/1.55 Consolas, 'Courier New', monospace; }
+.codigo-atividade code { white-space:pre; }
+
 @media (max-width: 560px) {
   .wrap { padding: 0 16px; }
   .topo-modulo, .cta { padding: 24px; border-radius: 28px; }

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atividades de reforço | Robótica na escola</title>
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<div class="wrap">
+<header class="cabecalho">
+<a class="logo" href="index.html">Robótica na escola</a>
+<nav aria-label="Principal">
+<a href="index.html#trilha">Missões</a>
+<a href="modulo-6.html">Projetos</a>
+<a href="modulo-extra.html" aria-current="page">Reforço</a>
+<a href="galeria.html">Galeria</a>
+<a href="glossario.html">Glossário</a>
+</nav>
+</header>
+<main id="conteudo">
+<section class="topo-modulo cor-menta topo-reforco">
+<span class="missao">Atividades extras</span>
+<h1>Reforço rápido</h1>
+<p>Explore a atividade interativa ou baixe uma ficha. Você pode escolher qualquer atividade, sem seguir a ordem das missões.</p>
+</section>
+<section class="grade-reforco" aria-label="Desafios de reforço">
+<details class="desafio-reforco atividade-arduino">
+<summary>Atividade extra 01: Botão acende LED</summary>
+<div class="conteudo">
+<span class="tema-reforco">Arduino · dificuldade básica</span>
+<p>Monte o circuito e programe o Arduino para acender um LED enquanto o botão estiver pressionado. Ao soltar o botão, o LED deve apagar.</p>
+
+<h3>Componentes</h3>
+<ul>
+<li>1 LED vermelho</li>
+<li>1 resistor de 300 Ω</li>
+<li>1 pushbutton</li>
+<li>1 resistor de 10 kΩ</li>
+<li>Arduino, protoboard e fios</li>
+</ul>
+
+<h3>Ligações</h3>
+<ul>
+<li>Conecte o pino digital 13 ao LED em série com o resistor de 300 Ω; ligue o outro lado ao GND.</li>
+<li>Ligue um lado do botão ao 5 V e o outro ao pino digital 2.</li>
+<li>Conecte o resistor de 10 kΩ entre o pino 2 e o GND para manter a entrada em nível baixo quando o botão estiver solto.</li>
+</ul>
+
+<h3>Programa</h3>
+<pre class="codigo-atividade"><code>const int ledPin = 13;
+const int Botao = 2;
+int EstadoBotao = 0;
+
+void setup() {
+	pinMode(ledPin, OUTPUT);
+	pinMode(Botao, INPUT);
+}
+
+void loop() {
+	EstadoBotao = digitalRead(Botao);
+
+	if (EstadoBotao == HIGH) {
+		digitalWrite(ledPin, HIGH);
+	} else {
+		digitalWrite(ledPin, LOW);
+	}
+}</code></pre>
+
+<h3>Teste</h3>
+<ol>
+<li>Confira as ligações e carregue o programa na placa.</li>
+<li>Pressione o botão: o LED deve acender.</li>
+<li>Solte o botão: o LED deve apagar.</li>
+</ol>
+<div class="dica"><b>Observe:</b> o Arduino lê o botão como entrada e controla o LED como saída. O resistor de 10 kΩ evita que o pino de entrada fique sem um estado definido quando o botão não está pressionado.</div>
+</div>
+</details>
+<article class="desafio-reforco">
+<h2>Atividade extra 02</h2>
+<a class="btn btn-borda" href="materiais/Ficha_do_Labirinto_Aula_02.pdf" download>Baixar material</a>
+</article>
+<article class="desafio-reforco">
+<h2>Atividade extra 03</h2>
+<a class="btn btn-borda" href="materiais/Ficha_das_Inventoras_Aula_03.pdf" download>Baixar material</a>
+</article>
+<article class="desafio-reforco">
+<h2>Atividade extra 04</h2>
+<a class="btn btn-borda" href="materiais/Ficha_das_Inventoras_Aula_04.pdf" download>Baixar material</a>
+</article>
+<article class="desafio-reforco">
+<h2>Atividade extra 05</h2>
+<a class="btn btn-borda" href="materiais/Ficha_das_Inventoras_Aula_05.pdf" download>Baixar material</a>
+</article>
+<article class="desafio-reforco">
+<h2>Atividade extra 06</h2>
+<a class="btn btn-borda" href="materiais/Ficha_das_Inventoras_Aula_06.pdf" download>Baixar material</a>
+</article>
+</section>
+<div class="rodape-modulo">
+<a class="btn btn-borda" href="index.html#trilha">Voltar para a trilha</a>
+<a class="btn btn-noite" href="modulo-6.html">Ir para os projetos</a>
+</div>
+</main>
+<footer class="rodape-site">Robótica na escola · feito para aprender construindo</footer>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
