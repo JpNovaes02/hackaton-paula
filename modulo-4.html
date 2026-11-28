@@ -40,61 +40,68 @@
 <div class="principal">
 <h2>1. Teoria</h2>
 <details data-tema="0">
-<summary>Energia elétrica<span class="estado">A fazer</span></summary>
+<summary>Tensão, corrente e energia elétrica<span class="estado">A fazer</span></summary>
 <div class="conteudo">
-<p>[Escreva aqui a explicação de “Energia elétrica”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
-<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<p>Uma fonte elétrica fornece energia ao circuito por meio da diferença de potencial, chamada tensão. A corrente representa o fluxo de cargas elétricas e precisa de um caminho fechado para circular.</p>
+<p>Resistência é uma propriedade que dificulta a passagem da corrente. Ela pode ser útil para limitar a intensidade elétrica recebida por componentes sensíveis, como LEDs.</p>
+<div class="dica"><b>Segurança:</b> nesta missão utilizamos tensões de baixo risco, mas é essencial verificar polaridade, ligações e conexões antes de energizar o circuito.</div>
 <button type="button" class="concluir">Marcar como concluído</button>
 </div>
 </details>
 <details data-tema="1">
-<summary>Circuitos simples<span class="estado">A fazer</span></summary>
+<summary>Circuitos e protoboard<span class="estado">A fazer</span></summary>
 <div class="conteudo">
-<p>[Escreva aqui a explicação de “Circuitos simples”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
-<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<p>Um circuito elétrico precisa conectar uma fonte, componentes e o caminho de retorno. Quando o circuito está fechado, a corrente pode circular; quando está aberto, o componente não recebe energia.</p>
+<p>No protoboard, os furos da mesma linha estão ligados internamente. Trilhas vermelhas e azuis costumam representar alimentação positiva e negativa, mas é necessário confirmar o padrão da placa utilizada.</p>
+<div class="dica"><b>Antes de ligar:</b> confira fonte, terra, polaridade dos componentes e se o circuito não contém curto-circuito entre alimentação e negativo.</div>
 <button type="button" class="concluir">Marcar como concluído</button>
 </div>
 </details>
 <details data-tema="2">
-<summary>LEDs e resistores<span class="estado">A fazer</span></summary>
+<summary>LED, resistor e polaridade<span class="estado">A fazer</span></summary>
 <div class="conteudo">
-<p>[Escreva aqui a explicação de “LEDs e resistores”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
-<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<p>O LED produz luz quando a corrente circula no sentido correto. Sua perna maior é o ânodo, que recebe a tensão positiva, e a perna menor é o cátodo, conectado ao negativo.</p>
+<p>O resistor limita a corrente e protege o LED contra intensidade excessiva. Mesmo que o LED acenda sem resistor em uma montagem inicial, isso pode danificá-lo ao longo do uso.</p>
+<div class="dica"><b>Observação:</b> LED ligado ao inverso não acende. A direção da corrente é tão importante quanto a tensão disponível.</div>
 <button type="button" class="concluir">Marcar como concluído</button>
 </div>
 </details>
 <details data-tema="3">
-<summary>Motores elétricos<span class="estado">A fazer</span></summary>
+<summary>Pinos digitais e sinais elétricos<span class="estado">A fazer</span></summary>
 <div class="conteudo">
-<p>[Escreva aqui a explicação de “Motores elétricos”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
-<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<p>Os pinos digitais do Arduino podem enviar ou receber sinais elétricos. A saída pode assumir estados como ligado ou desligado, permitindo controlar LEDs e outros componentes.</p>
+<p>O código associa um pino à função do componente e controla esse pino com instruções. Uma saída pode fornecer a tensão necessária para acender um LED, enquanto uma entrada pode perceber o estado de um botão.</p>
+<div class="dica"><b>Organize o circuito:</b> use nomes claros para os pinos no programa e mantenha os fios correspondentes agrupados no protoboard.</div>
 <button type="button" class="concluir">Marcar como concluído</button>
 </div>
 </details>
 <details data-tema="4">
-<summary>Sensores e atuadores<span class="estado">A fazer</span></summary>
+<summary>Sensores, condicionais e atuadores<span class="estado">A fazer</span></summary>
 <div class="conteudo">
-<p>[Escreva aqui a explicação de “Sensores e atuadores”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
-<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<p>O sensor transforma uma condição do ambiente em uma informação elétrica que pode ser lida pelo Arduino. Um botão, por exemplo, informa se está pressionado ou não.</p>
+<p>O programa usa essa entrada em uma condicional. “Se o botão está pressionado, acenda o LED” cria uma relação entre percepção e ação.</p>
+<p>LEDs e motores são atuadores: recebem uma ordem do sistema e produzem luz, movimento ou outra resposta observável.</p>
+<div class="dica"><b>Entradas e saídas:</b> sensor informa, o programa decide e atuador responde.</div>
 <button type="button" class="concluir">Marcar como concluído</button>
 </div>
 </details>
 <details data-tema="5">
-<summary>Entradas e saídas de um sistema<span class="estado">A fazer</span></summary>
+<summary>Testar, observar e depurar circuitos<span class="estado">A fazer</span></summary>
 <div class="conteudo">
-<p>[Escreva aqui a explicação de “Entradas e saídas de um sistema”. Sugestão: texto curto, uma imagem e, se quiser, um vídeo.]</p>
-<div class="dica"><b>Você sabia?</b> [curiosidade opcional]</div>
+<p>A montagem deve ser testada em etapas. Primeiro verificamos a alimentação e o circuito; depois confirmamos o componente; por fim testamos a condição programada.</p>
+<p>Quando o LED não acende, podemos investigar polaridade, resistor, fios, pino selecionado e lógica do programa. Alterar uma variável por vez facilita localizar o problema.</p>
+<div class="dica"><b>Depuração:</b> compare o comportamento esperado com o observado e registre qual ligação ou instrução foi modificada em cada teste.</div>
 <button type="button" class="concluir">Marcar como concluído</button>
 </div>
 </details>
 
 <h2 class="espaco">3. Quiz rápido</h2>
 <div class="quiz">
-<p class="pergunta" id="pergunta">Para que serve o resistor em um circuito com LED?</p>
+<p class="pergunta" id="pergunta">Qual combinação corresponde às condições necessárias para acender um LED em um circuito seguro?</p>
 <div role="radiogroup" aria-labelledby="pergunta">
-<label class="opcao"><input type="radio" name="q" data-certo="sim">Limita a corrente para proteger o LED</label>
-<label class="opcao"><input type="radio" name="q">Faz o LED piscar sozinho</label>
-<label class="opcao"><input type="radio" name="q">Aumenta a tensão da bateria</label>
+<label class="opcao"><input type="radio" name="q" data-certo="sim">Circuito fechado, polaridade correta e resistor no caminho</label>
+<label class="opcao"><input type="radio" name="q">Circuito aberto e LED ligado ao contrário</label>
+<label class="opcao"><input type="radio" name="q">Apenas bateria sem nenhuma conexão</label>
 </div>
 <button type="button" id="conferir">Conferir resposta</button>
 <p id="resposta" role="status" aria-live="polite"></p>
@@ -103,14 +110,14 @@
 <aside class="lateral">
 <div class="pratica">
 <span class="rotulo">2. Missão prática</span>
-<h3>Acenda um LED com uma condição</h3>
-<p>Monte um protoboard com Arduino para acender um LED ao detectar uma condição, ou construa um robô que se movimente ao receber um comando.</p>
+<h3>Monte uma entrada e uma saída no Arduino</h3>
+<p>Conecte um LED protegido por resistor e use um botão ou sensor como entrada. Programe uma condição que transforme a leitura em uma ação visível no LED.</p>
 <span class="sub">Materiais</span>
-<ul class="lista"><li>Arduino</li><li>Protoboard</li><li>LED e resistor</li><li>Fios (jumpers)</li><li>Um sensor ou botão</li></ul>
+<ul class="lista"><li>Arduino e cabo USB</li><li>Protoboard e fios jumpers</li><li>LED, resistor e botão ou sensor</li><li>Mapa visual de ligações da aula</li></ul>
 <span class="sub">Marque o que você já fez</span>
-<label class="opcao"><input type="checkbox" class="passo" data-i="0">Montei o circuito com LED e resistor</label>
-<label class="opcao"><input type="checkbox" class="passo" data-i="1">Programei a condição para acender o LED</label>
-<label class="opcao"><input type="checkbox" class="passo" data-i="2">Testei e corrigi os erros</label>
+<label class="opcao"><input type="checkbox" class="passo" data-i="0">Identifiquei polaridade e montei o circuito no protoboard</label>
+<label class="opcao"><input type="checkbox" class="passo" data-i="1">Configurei o pino de entrada e uma condicional no Arduino</label>
+<label class="opcao"><input type="checkbox" class="passo" data-i="2">Testei a condição e depurei ligações ou código</label>
 <div class="barra barra-pratica" aria-hidden="true"><div id="prog-pratica" style="width:0%"></div></div>
 <span class="sub" id="contagem" aria-live="polite">0 de 3 passos</span>
 <div class="extra">Desafio extra: Adicione um segundo LED que acende em uma condição diferente.</div>

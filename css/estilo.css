@@ -179,7 +179,13 @@ input[type=radio], input[type=checkbox] { width: 20px; height: 20px; flex: none;
 .painel-slides,
 .painel-material { background:#fff; border:2px solid var(--noite); border-radius:24px; padding:24px; margin:20px 0 32px; }
 .painel-slides[hidden],
-.painel-material[hidden] { display:none !important; }
+.painel-material[hidden],
+.painel-simulador[hidden] { display:none !important; }
+.painel-simulador { background:#fff; border:2px solid var(--noite); border-radius:24px; padding:24px; margin:20px 0 32px; }
+.acoes-simulador { display:flex; justify-content:flex-end; margin:16px 0; }
+.visualizador-simulador { position:relative; width:100%; height:760px; background:#f2f2f2; border:2px solid var(--noite); border-radius:16px; overflow:hidden; }
+.visualizador-simulador iframe { width:100%; height:100%; border:0; }
+@media (max-width:850px) { .visualizador-simulador { height:620px; } .acoes-simulador { justify-content:flex-start; } }
 .lista-downloads { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:14px; margin-top:20px; }
 .card-download { display:flex; align-items:center; gap:14px; min-height:88px; padding:18px; border:2px solid var(--noite); border-radius:16px; background:#fff; color:var(--noite); text-decoration:none; transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
 .card-download:hover { transform:translateY(-2px); box-shadow:0 6px 0 var(--noite); border-color:var(--violeta); }
