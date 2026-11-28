@@ -49,6 +49,10 @@
 <li>Ligue um lado do botão ao 5 V e o outro ao pino digital 2.</li>
 <li>Conecte o resistor de 10 kΩ entre o pino 2 e o GND para manter a entrada em nível baixo quando o botão estiver solto.</li>
 </ul>
+<figure class="imagem-circuito">
+<img src="img/atividade-extra-01-circuito.png" alt="Diagrama do circuito com um botão, um LED vermelho, resistores e uma placa Arduino">
+<figcaption>Esquema do Módulo 1 · Apostila RoboCore, página impressa 20.</figcaption>
+</figure>
 
 <h3>Programa</h3>
 <pre class="codigo-atividade"><code>const int ledPin = 13;
@@ -79,26 +83,344 @@ void loop() {
 <div class="dica"><b>Observe:</b> o Arduino lê o botão como entrada e controla o LED como saída. O resistor de 10 kΩ evita que o pino de entrada fique sem um estado definido quando o botão não está pressionado.</div>
 </div>
 </details>
-<article class="desafio-reforco">
-<h2>Atividade extra 02</h2>
-<a class="btn btn-borda" href="materiais/Ficha_do_Labirinto_Aula_02.pdf" download>Baixar material</a>
-</article>
-<article class="desafio-reforco">
-<h2>Atividade extra 03</h2>
-<a class="btn btn-borda" href="materiais/Ficha_das_Inventoras_Aula_03.pdf" download>Baixar material</a>
-</article>
-<article class="desafio-reforco">
-<h2>Atividade extra 04</h2>
-<a class="btn btn-borda" href="materiais/Ficha_das_Inventoras_Aula_04.pdf" download>Baixar material</a>
-</article>
-<article class="desafio-reforco">
-<h2>Atividade extra 05</h2>
-<a class="btn btn-borda" href="materiais/Ficha_das_Inventoras_Aula_05.pdf" download>Baixar material</a>
-</article>
-<article class="desafio-reforco">
-<h2>Atividade extra 06</h2>
-<a class="btn btn-borda" href="materiais/Ficha_das_Inventoras_Aula_06.pdf" download>Baixar material</a>
-</article>
+<details class="desafio-reforco atividade-arduino">
+<summary>Atividade extra 02: Três botões e três LEDs</summary>
+<div class="conteudo">
+<span class="tema-reforco">Arduino · entradas e saídas</span>
+<p>Amplie a atividade anterior: pressione qualquer botão para acender o LED correspondente. Ao soltar o botão, esse LED deve apagar. Cada botão controla apenas um LED.</p>
+
+<h3>Componentes</h3>
+<ul>
+<li>1 LED verde, 1 LED amarelo e 1 LED vermelho</li>
+<li>3 resistores de 300 Ω para os LEDs</li>
+<li>3 pushbuttons</li>
+<li>3 resistores de 10 kΩ para as entradas dos botões</li>
+<li>Arduino, protoboard e fios</li>
+</ul>
+
+<h3>Ligações</h3>
+<ul>
+<li>LED verde no pino 13, LED amarelo no pino 12 e LED vermelho no pino 11; use um resistor de 300 Ω em série com cada LED e conecte ao GND.</li>
+<li>Botões 1, 2 e 3 nos pinos digitais 2, 3 e 4, respectivamente. Ligue um lado de cada botão ao 5 V.</li>
+<li>Use um resistor de 10 kΩ entre cada entrada (pinos 2, 3 e 4) e o GND para manter o sinal baixo enquanto o botão estiver solto.</li>
+</ul>
+<figure class="imagem-circuito">
+<img src="img/atividade-extra-02-circuito.png" alt="Diagrama de três botões e três LEDs coloridos ligados a uma placa Arduino">
+<figcaption>Esquema do Módulo 2 · Apostila RoboCore, página impressa 22.</figcaption>
+</figure>
+
+<h3>Programa</h3>
+<pre class="codigo-atividade"><code>const int ledPin1 = 13;
+const int ledPin2 = 12;
+const int ledPin3 = 11;
+const int botao1 = 2;
+const int botao2 = 3;
+const int botao3 = 4;
+
+int estadoBotao1 = LOW;
+int estadoBotao2 = LOW;
+int estadoBotao3 = LOW;
+
+void setup() {
+	pinMode(ledPin1, OUTPUT);
+	pinMode(ledPin2, OUTPUT);
+	pinMode(ledPin3, OUTPUT);
+	pinMode(botao1, INPUT);
+	pinMode(botao2, INPUT);
+	pinMode(botao3, INPUT);
+}
+
+void loop() {
+	estadoBotao1 = digitalRead(botao1);
+	estadoBotao2 = digitalRead(botao2);
+	estadoBotao3 = digitalRead(botao3);
+
+	digitalWrite(ledPin1, estadoBotao1);
+	digitalWrite(ledPin2, estadoBotao2);
+	digitalWrite(ledPin3, estadoBotao3);
+}</code></pre>
+
+<h3>Teste</h3>
+<ol>
+<li>Confira a polaridade dos LEDs e as ligações dos três resistores de 10 kΩ.</li>
+<li>Carregue o programa e pressione cada botão separadamente.</li>
+<li>Confirme que acende o LED correspondente e que ele apaga ao soltar o botão.</li>
+</ol>
+<div class="dica"><b>Investigue:</b> teste dois botões ao mesmo tempo. Como cada entrada é lida separadamente, os LEDs correspondentes devem permanecer acesos enquanto os respectivos botões estiverem pressionados.</div>
+</div>
+</details>
+<details class="desafio-reforco atividade-arduino">
+<summary>Atividade extra 03: Projeto Piano</summary>
+<div class="conteudo">
+<span class="tema-reforco">Arduino · botões, LEDs e buzzer</span>
+<p>Monte um pequeno piano eletrônico: cada botão toca uma nota e acende o LED correspondente. Ao soltar o botão, o LED apaga e o buzzer para. Você também pode expandir o projeto com uma quarta nota usando um botão e o LED reserva.</p>
+
+<h3>Componentes</h3>
+<ul>
+<li>1 LED verde, 1 LED amarelo e 1 LED vermelho</li>
+<li>3 resistores de 300 Ω para os LEDs</li>
+<li>3 pushbuttons e 3 resistores de 10 kΩ</li>
+<li>1 buzzer piezo compatível com a função <code>tone()</code></li>
+<li>Arduino, protoboard e fios</li>
+</ul>
+
+<h3>Ligações</h3>
+<ul>
+<li>LED verde no pino 13, amarelo no pino 12 e vermelho no pino 11; use um resistor de 300 Ω em série com cada LED.</li>
+<li>Botões 1, 2 e 3 nos pinos digitais 2, 3 e 4. Ligue um lado de cada botão ao 5 V e use um resistor de 10 kΩ entre cada entrada e o GND.</li>
+<li>Ligue o sinal positivo do buzzer ao pino digital 10 e o terminal negativo ao GND. Confira a polaridade indicada no componente.</li>
+</ul>
+<figure class="imagem-circuito">
+<img src="img/atividade-extra-03-circuito.png" alt="Diagrama do Projeto Piano com três botões, três LEDs, um buzzer e uma placa Arduino">
+<figcaption>Esquema do Projeto Piano · Apostila RoboCore, página impressa 24.</figcaption>
+</figure>
+
+<h3>Programa</h3>
+<pre class="codigo-atividade"><code>const int ledPin1 = 13;
+const int ledPin2 = 12;
+const int ledPin3 = 11;
+const int botao1 = 2;
+const int botao2 = 3;
+const int botao3 = 4;
+const int buzzerPin = 10;
+
+int estadoBotao1 = LOW;
+int estadoBotao2 = LOW;
+int estadoBotao3 = LOW;
+
+void setup() {
+	pinMode(ledPin1, OUTPUT);
+	pinMode(ledPin2, OUTPUT);
+	pinMode(ledPin3, OUTPUT);
+	pinMode(botao1, INPUT);
+	pinMode(botao2, INPUT);
+	pinMode(botao3, INPUT);
+	pinMode(buzzerPin, OUTPUT);
+}
+
+void loop() {
+	estadoBotao1 = digitalRead(botao1);
+	estadoBotao2 = digitalRead(botao2);
+	estadoBotao3 = digitalRead(botao3);
+
+	if (estadoBotao1 == HIGH &amp;&amp; estadoBotao2 == LOW &amp;&amp; estadoBotao3 == LOW) {
+		digitalWrite(ledPin1, HIGH);
+		digitalWrite(ledPin2, LOW);
+		digitalWrite(ledPin3, LOW);
+		tone(buzzerPin, 100);
+	} else if (estadoBotao2 == HIGH &amp;&amp; estadoBotao1 == LOW &amp;&amp; estadoBotao3 == LOW) {
+		digitalWrite(ledPin1, LOW);
+		digitalWrite(ledPin2, HIGH);
+		digitalWrite(ledPin3, LOW);
+		tone(buzzerPin, 500);
+	} else if (estadoBotao3 == HIGH &amp;&amp; estadoBotao1 == LOW &amp;&amp; estadoBotao2 == LOW) {
+		digitalWrite(ledPin1, LOW);
+		digitalWrite(ledPin2, LOW);
+		digitalWrite(ledPin3, HIGH);
+		tone(buzzerPin, 1000);
+	} else {
+		digitalWrite(ledPin1, LOW);
+		digitalWrite(ledPin2, LOW);
+		digitalWrite(ledPin3, LOW);
+		noTone(buzzerPin);
+	}
+}</code></pre>
+
+<h3>Teste</h3>
+<ol>
+<li>Confira a polaridade dos LEDs, os resistores dos botões e as ligações do buzzer.</li>
+<li>Carregue o programa e pressione cada botão separadamente.</li>
+<li>Confirme que cada botão acende um LED e toca uma frequência diferente; ao soltar, o som para e o LED apaga.</li>
+</ol>
+<div class="dica"><b>Experimente:</b> mude os valores de frequência em <code>tone()</code> e compare os sons. Para este exemplo, os botões tocam 100, 500 e 1000 Hz.</div>
+</div>
+</details>
+<details class="desafio-reforco atividade-arduino">
+<summary>Atividade extra 04: Termômetro com barra de LEDs</summary>
+<div class="conteudo">
+<span class="tema-reforco">Arduino · sensor analógico e alarme</span>
+<p>Use o sensor LM35 para medir a temperatura do ambiente. Conforme a leitura aumenta, mais LEDs da barra gráfica acendem; acima de 28 °C, o buzzer emite um alerta.</p>
+
+<h3>Componentes</h3>
+<ul>
+<li>1 sensor de temperatura LM35</li>
+<li>1 barra gráfica de 10 LEDs</li>
+<li>Resistores de 300 Ω conforme a montagem do kit</li>
+<li>1 buzzer de 5 V</li>
+<li>Arduino, protoboard e fios</li>
+</ul>
+
+<h3>Ligações</h3>
+<ul>
+<li>Conecte a saída do LM35 à entrada analógica A0; ligue alimentação e GND conforme a orientação do encapsulamento do sensor.</li>
+<li>Conecte os dez segmentos da barra gráfica às saídas digitais 2 a 11, respeitando a polaridade e o sentido indicados no componente.</li>
+<li>Ligue o terminal positivo do buzzer ao pino digital 12 e o outro terminal ao GND.</li>
+</ul>
+<figure class="imagem-circuito">
+<img src="img/atividade-extra-04-circuito.png" alt="Diagrama do termômetro com sensor LM35, barra gráfica de dez LEDs, buzzer e placa Arduino">
+<figcaption>Esquema do Projeto Termômetro · Apostila RoboCore, página impressa 33.</figcaption>
+</figure>
+
+<h3>Programa</h3>
+<pre class="codigo-atividade"><code>const int sensorLM35 = A0;
+const int buzzerPin = 12;
+const int leds[] = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
+
+void setup() {
+	analogReference(INTERNAL); // Arduino Uno: referência interna de 1,1 V
+	pinMode(buzzerPin, OUTPUT);
+
+	for (int i = 0; i &lt; 10; i++) {
+		pinMode(leds[i], OUTPUT);
+	}
+}
+
+void loop() {
+	int leituraADC = analogRead(sensorLM35);
+	float temperatura = leituraADC * 0.10752688;
+
+	for (int i = 0; i &lt; 10; i++) {
+		float limite = 23.5 + (0.5 * i);
+		digitalWrite(leds[i], temperatura &gt; limite ? HIGH : LOW);
+	}
+
+	if (temperatura &gt; 28.0) {
+		tone(buzzerPin, 2000);
+	} else {
+		noTone(buzzerPin);
+	}
+}</code></pre>
+
+<h3>Teste</h3>
+<ol>
+<li>Confira a polaridade do LM35, da barra gráfica e do buzzer antes de energizar o circuito.</li>
+<li>Carregue o programa e observe quantos LEDs acendem na temperatura ambiente.</li>
+<li>Aqueça o sensor suavemente com os dedos: a barra deve avançar conforme a leitura aumenta.</li>
+<li>Observe o buzzer quando a leitura ultrapassar 28 °C.</li>
+</ol>
+<div class="dica"><b>Calibração:</b> a referência interna e o fator de conversão variam entre placas. No Arduino Mega use <code>INTERNAL1V1</code>; no Leonardo, remova a chamada <code>analogReference(INTERNAL)</code> e ajuste a conversão conforme a placa.</div>
+<div class="dica"><b>Nota sobre a barra:</b> a lista de componentes da página 33 cita dez resistores de 300 Ω; a explicação da página 35 descreve unir os pinos comuns da barra para compartilhar um resistor. Confirme a topologia do seu bargraph e siga o esquema do kit.</div>
+</div>
+</details>
+<details class="desafio-reforco atividade-arduino">
+<summary>Atividade extra 05: Módulo 6, LCD por comunicação serial</summary>
+<div class="conteudo">
+<span class="tema-reforco">Arduino · LCD 16x2 e comunicação serial</span>
+<p>Envie caracteres pelo Monitor Serial e mostre o texto recebido em tempo real no display LCD. Cada caractere ocupará uma posição e o cursor avançará entre as colunas e linhas.</p>
+
+<h3>Componentes</h3>
+<ul>
+<li>1 display LCD 16x2</li>
+<li>Arduino, protoboard e fios</li>
+<li>Cabo USB para abrir o Monitor Serial</li>
+</ul>
+
+<h3>Ligações</h3>
+<ul>
+<li>LCD nos pinos digitais definidos pela biblioteca: RS no 12, Enable no 11 e dados nos pinos 5, 4, 3 e 2.</li>
+<li>Alimente o LCD com 5 V e GND; ajuste o contraste com o potenciômetro indicado no circuito do kit.</li>
+</ul>
+<figure class="imagem-circuito">
+<img src="img/atividade-extra-05-circuito.png" alt="Diagrama do módulo LCD 16x2 com potenciômetro de contraste e ligação à placa Arduino">
+<figcaption>Esquema do Módulo 5 · Apostila RoboCore, página impressa 50.</figcaption>
+</figure>
+
+<h3>Programa</h3>
+<pre class="codigo-atividade"><code>#include &lt;LiquidCrystal.h&gt;
+
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+int incomingByte, x, y;
+
+void setup() {
+  lcd.begin(16, 2);
+  Serial.begin(9600);
+  x = 0;
+  y = 0;
+}
+
+void loop() {
+  if (Serial.available() &gt; 0) {
+    incomingByte = Serial.read();
+    lcd.print(char(incomingByte));
+
+    x = x + 1;
+    y = y + 1;
+
+    if (x &gt; 15) {
+      lcd.setCursor(0, 1);
+      x = 0;
+    }
+
+    if (y &gt; 31) {
+      lcd.setCursor(0, 0);
+      y = 0;
+      x = 0;
+    }
+  }
+}</code></pre>
+
+<h3>Teste</h3>
+<ol>
+<li>Monte o LCD e carregue o programa no Arduino.</li>
+<li>Abra o Monitor Serial e configure a velocidade em 9600 baud.</li>
+<li>Digite uma mensagem e clique em Enviar.</li>
+<li>Observe os caracteres aparecerem no LCD e o cursor avançar pelas duas linhas.</li>
+</ol>
+<div class="dica"><b>Observe:</b> <code>Serial.available()</code> verifica se chegou informação pela porta serial; <code>Serial.read()</code> lê o byte recebido e <code>lcd.print(char(incomingByte))</code> o transforma em caractere no display.</div>
+</div>
+</details>
+
+<details class="desafio-reforco atividade-arduino">
+<summary>Atividade extra 06: Theremin Agudo</summary>
+<div class="conteudo">
+<span class="tema-reforco">Arduino · sensor de luminosidade e buzzer</span>
+<p>Monte um instrumento eletrônico sem contato físico com as teclas. A luminosidade recebida pelo LDR altera a frequência do buzzer e, portanto, o som produzido.</p>
+
+<h3>Componentes</h3>
+<ul>
+<li>1 sensor de luminosidade LDR</li>
+<li>1 resistor de 10 kΩ</li>
+<li>1 buzzer compatível com a função <code>tone()</code></li>
+<li>Arduino, protoboard e fios</li>
+</ul>
+
+<h3>Ligações</h3>
+<ul>
+<li>Ligue o LDR e o resistor em divisor de tensão na entrada analógica A0.</li>
+<li>Conecte um terminal do buzzer ao pino digital 5 e o outro ao GND.</li>
+<li>Depois de montar, cubra e destampe o LDR vagarosamente para comparar as frequências produzidas.</li>
+</ul>
+<figure class="imagem-circuito">
+<img src="img/atividade-extra-06-circuito.png" alt="Diagrama do Theremin Agudo com LDR, resistor de 10 kΩ, buzzer e placa Arduino">
+<figcaption>Esquema do Projeto Theremin Agudo · Apostila RoboCore, página impressa 79.</figcaption>
+</figure>
+
+<h3>Programa</h3>
+<pre class="codigo-atividade"><code>int valorSensor = 0;
+int nota = 0;
+const int buzzerPin = 5;
+
+void setup() {
+  pinMode(buzzerPin, OUTPUT);
+}
+
+void loop() {
+  valorSensor = analogRead(A0);
+  nota = map(valorSensor, 1023, 0, 1000, 6000);
+  tone(buzzerPin, nota, 20);
+  delay(10);
+}</code></pre>
+
+<h3>Teste</h3>
+<ol>
+<li>Confira o divisor formado pelo LDR e pelo resistor de 10 kΩ.</li>
+<li>Carregue o programa e observe o som do buzzer.</li>
+<li>Tape o LDR e destampe vagarosamente para ouvir mudanças de frequência.</li>
+<li>Compare diferentes ambientes: sombra, luz natural e luz direta.</li>
+</ol>
+<div class="dica"><b>Calibração:</b> os limites de <code>map()</code> podem ser ajustados para cada sensor e ambiente. No exemplo da apostila, o som varia entre aproximadamente 1000 Hz e 6000 Hz.</div>
+</div>
+</details>
 </section>
 <div class="rodape-modulo">
 <a class="btn btn-borda" href="index.html#trilha">Voltar para a trilha</a>

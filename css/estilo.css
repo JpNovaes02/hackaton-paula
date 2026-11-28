@@ -172,6 +172,9 @@ input[type=radio], input[type=checkbox] { width: 20px; height: 20px; flex: none;
 .atividade-arduino ul, .atividade-arduino ol { margin:0; padding-left:24px; }
 .codigo-atividade { width:100%; max-width:900px; overflow-x:auto; margin:0; padding:18px; border-radius:12px; background:var(--noite); color:#fff; font:14px/1.55 Consolas, 'Courier New', monospace; }
 .codigo-atividade code { white-space:pre; }
+.imagem-circuito { max-width:860px; margin:18px 0; }
+.imagem-circuito img { display:block; width:100%; height:auto; border:1px solid #D9D4EC; border-radius:12px; }
+.imagem-circuito figcaption { margin-top:7px; color:var(--suave); font-size:13px; }
 
 @media (max-width: 560px) {
   .wrap { padding: 0 16px; }
